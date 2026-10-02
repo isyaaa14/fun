@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lamp Is On</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500;1,9..144,600&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="scene" id="scene" aria-hidden="true"></div>
+
+  <!-- STEP 1: breathing intro -->
+  <section class="screen" id="screen-intro">
+    <div class="eyebrow">before anything else</div>
+    <h1>Hey. <em>Deep breaths</em> first.</h1>
+    <div class="breathe-wrap">
+      <div class="breathe-circle" id="breatheCircle">
+        <span id="breatheText">in...</span>
+      </div>
+      <p class="breathe-caption">Just follow the circle for a few rounds. No rush.</p>
+    </div>
+    <button class="btn-ghost" id="toReminderBtn">click here</button>
+  </section>
+
+  <!-- STEP 2: gentle reminder -->
+  <section class="screen" id="screen-reminder" hidden>
+    <div class="eyebrow">a small light, left on for you</div>
+    <h1>One thing before you go back to it.</h1>
+
+    <button class="btn-main" id="reminderBtn">give me a gentle reminder</button>
+
+    <p class="reminder-text" id="reminderText" hidden>
+      You're not behind. You're just in the middle of something hard right now.
+    </p>
+
+    <button class="btn-main btn-accent" id="cheerBtn" hidden>tell me more</button>
+  </section>
+
+  <!-- MODAL: cheer-up message -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <p class="modal-eyebrow" id="modalTitle">something to hold onto</p>
+      <div class="modal-body" id="modalBody">
+        <!-- filled by script.js -->
+      </div>
+      <div class="modal-dots" id="modalDots" aria-hidden="true"></div>
+      <div class="modal-divider"></div>
+      <p class="modal-closing">Whatever this week decides, I'm all ears for you.</p>
+      <p class="modal-signoff">— Sya :)</p>
+      <div class="modal-actions">
+        <button class="btn-ghost" id="againBtn">read it again</button>
+        <button class="btn-main btn-accent" id="doItBtn">you can do it</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINALE -->
+  <div class="finale-overlay" id="finaleOverlay" hidden>
+    <h2 class="finale-text">You can do it.</h2>
+
+    <div class="finale-dog" aria-hidden="true">
+      <div class="speech-bubble">Hey brother Roxcy believes in you too hehe </div>
+      <img class="dog-photo" src="images/roxcy.png" alt="Roxcy the dog">
+    </div>
+
+    <button class="btn-ghost" id="finaleBackBtn">back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
